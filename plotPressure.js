@@ -4,18 +4,18 @@
 chartHumidity() ();
 
 async function chartHumidity() { 
-  await getData();
+  const datap = await getData();
   const CHART = document.getElementById("chartPressure");
   console.log(CHART);
   let lineChart = new Chart(CHART, {
     type: 'line',
     data: data = {
-      labels: timeVec,
+      labels: datap.timeVec,
         datasets: [{
           label: 'Pressure [kPa]',
-          backgroundColor: 'rgb(255, 99, 132)',
-          borderColor: 'rgb(255, 99, 132)',
-          data: presVec,
+          backgroundColor: 'rgb(0,0,128)',
+          borderColor: 'rgb(0,0,128)',
+          data: datap.presVec,
           xAxisID: 'Time',
       }]
     }
