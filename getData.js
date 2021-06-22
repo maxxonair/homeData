@@ -21,7 +21,7 @@ async function getData(){
       const columns = row.split(DELIM);
       const temp     = columns[1];
       const humidity = columns[2];
-      const pressure = columns[3]/1000;
+      const pressure = columns[3];
       const date     = columns[4];
       const time     = columns[5];
       timeVec.push(time);
